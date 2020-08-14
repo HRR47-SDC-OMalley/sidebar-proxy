@@ -1,0 +1,17 @@
+body {
+  position: relative;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+#sb {
+  max-width: 35%;
+  padding-left: 4%;
+}
+#product-info {
+  display: grid;
+  grid-template-rows: min-content min-content;
+}
