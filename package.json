@@ -1,0 +1,23 @@
+{
+  "name": "reburke-proxy-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HRR47-FEC-Burke/reburke-proxy-one.git"
+  },
+  "author": "Doruk Gurleyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRR47-FEC-Burke/reburke-proxy-one/issues"
+  },
+  "homepage": "https://github.com/HRR47-FEC-Burke/reburke-proxy-one#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
