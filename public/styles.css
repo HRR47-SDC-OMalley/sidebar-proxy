@@ -5,25 +5,21 @@ body {
 }
 section {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   max-width: 1300px;
   margin: 0 auto;
 }
 @media only screen and (max-width: 768px) {
   section {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   }
 }
 #main-photo {
-  max-width: 700px;
   min-width: 20rem;
-  width: 50vw;
+  max-width: 700px;
   position: relative;
-}
-@media only screen and (max-width: 768px) {
-  #main-photo {
-    width: 100%;
-  }
+  width: 40vw;
 }
 #main-photo > div {
   left: 0;
@@ -35,11 +31,14 @@ section {
   padding: 0 2.7em;
 }
 #reviews > div > div {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
   min-width: 20rem;
   max-width: 700px;
-  width: 50vw;
+  width: 40vw;
 }
 @media only screen and (max-width: 768px) {
   #reviews > div > div {
@@ -48,19 +47,15 @@ section {
 }
 #sb {
   margin: 0 1em 2em 2.7rem;
-  padding-top: 2.5em;
-}
-#sb > div {
-  display: flex;
-  justify-content: flex-end;
-}
-@media only screen and (max-width: 768px) {
-  #sb > div {
-    justify-content: flex-start;
-  }
 }
 #sb > div > div {
   margin: 0;
+  margin-top: 2.5em;
   max-width: 700px;
   width: 90%;
+}
+@media only screen and (max-width: 768px) {
+  #sb > div > div {
+  margin-top: 0;
+  }
 }
