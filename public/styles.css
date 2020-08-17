@@ -1,18 +1,29 @@
 body {
+  font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   position: relative;
   margin: 0;
 }
 section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1300px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 768px) {
+  section {
+    flex-wrap: wrap;
+  }
+}
 #main-photo {
-  min-width: 20rem;
   max-width: 700px;
+  min-width: 20rem;
+  width: 50vw;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  #main-photo {
+    width: 100%;
+  }
 }
 #main-photo > div {
   left: 0;
@@ -25,8 +36,10 @@ section {
 }
 #reviews > div > div {
   margin-left: 0;
+  margin-right: 0;
   min-width: 20rem;
-  width: 700px;
+  max-width: 700px;
+  width: 50vw;
 }
 @media only screen and (max-width: 768px) {
   #reviews > div > div {
@@ -35,6 +48,16 @@ section {
 }
 #sb {
   margin: 0 1em 2em 2.7rem;
+  padding-top: 2.5em;
+}
+#sb > div {
+  display: flex;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  #sb > div {
+    justify-content: flex-start;
+  }
 }
 #sb > div > div {
   margin: 0;
