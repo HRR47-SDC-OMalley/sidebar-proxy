@@ -1,5 +1,6 @@
 body {
   position: relative;
+  margin: 0;
 }
 section {
   display: flex;
@@ -8,24 +9,35 @@ section {
   max-width: 1300px;
   margin: 0 auto;
 }
-#photo {
-  margin-left: 2.7rem;
+#main-photo {
   min-width: 20rem;
   max-width: 700px;
   position: relative;
-  width: 36vw;
+}
+#main-photo > div {
+  left: 0;
 }
 #product-info {
   display: grid;
   grid-template-rows: min-content min-content;
+  position: relative;
+  padding: 0 2.7em;
 }
 #reviews > div > div {
+  margin-left: 0;
   min-width: 20rem;
-  max-width: 700px;
-  width: 36vw;
+  width: 700px;
+}
+@media only screen and (max-width: 768px) {
+  #reviews > div > div {
+    width: 100%;
+  }
+}
+#sb {
+  margin: 0 1em 2em 2.7rem;
 }
 #sb > div > div {
-  margin: 3rem 0 0 2.7rem;
+  margin: 0;
   max-width: 700px;
   width: 90%;
 }
