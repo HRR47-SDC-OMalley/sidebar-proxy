@@ -30,6 +30,12 @@ section {
   position: relative;
   padding: 0 2.7em;
 }
+@media only screen and (max-width: 768px) {
+  #product-info {
+  padding: 0;
+  margin: 0 auto;
+  }
+}
 #reviews > div > div {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -48,6 +54,12 @@ section {
 #sb {
   margin: 0 1em 2em 0;
 }
+@media only screen and (max-width: 768px) {
+  #sb {
+  margin-left: 5%;
+  margin-right: 0;
+  }
+}
 #sb > div > div {
   margin: 0;
   margin-top: 3rem;
@@ -58,11 +70,7 @@ section {
 @media only screen and (max-width: 768px) {
   #sb > div > div {
   margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
   }
-}
-.sb-smallText {
-  font-size: .8rem !important;
-}
-#sb button {
-  font-weight: 700;
 }
