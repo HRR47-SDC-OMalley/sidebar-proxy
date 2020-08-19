@@ -25,7 +25,7 @@ app.use('*/sb/api', createProxyMiddleware(sbProxy));
 /**
  * Seller Reviews Proxy
  */
-const reviewsTarget = process.env.REVIEWS_TARGET || 'http://localhost:3210';
+const reviewsTarget = process.env.REVIEWS_TARGET || 'http://localhost:2625';
 const reviewsProxy = { target: reviewsTarget, changeOrigin: true }
 app.use('*/reviews/api', createProxyMiddleware(reviewsProxy));
 
