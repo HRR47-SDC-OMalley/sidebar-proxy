@@ -53,10 +53,11 @@ if (CLOUD_STYLE_URL) {
   app.get('*/styles.css', (req, res) => {
     res.redirect(`${CLOUD_STYLE_URL}/assets/styles.css`);
   });
+} else {
+  app.use('*/styles.css', express.static(
+    path.resolve(__dirname, './../public/styles.css'
+  )));
 }
-app.use('*/styles.css', express.static(
-  path.resolve(__dirname, './../public/styles.css'
-)));
 
 /**
  * Main Photo Proxy
