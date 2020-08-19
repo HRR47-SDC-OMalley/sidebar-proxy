@@ -51,7 +51,6 @@ app.get('/item/:id', (req, res) => {
  */
 if (CLOUD_STYLE_URL) {
   app.get('*/styles.css', (req, res) => {
-    const asset = req.params.asset;
     res.redirect(`${CLOUD_STYLE_URL}/assets/styles.css`);
   });
 }
