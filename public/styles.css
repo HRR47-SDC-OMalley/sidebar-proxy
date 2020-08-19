@@ -23,6 +23,10 @@ section {
 }
 #main-photo > div {
   left: 0;
+  position: unset;
+  margin-left: unset;
+  margin-right: unset;
+  max-width: unset;
 }
 #product-info {
   display: grid;
@@ -45,11 +49,6 @@ section {
   min-width: 20rem;
   max-width: 700px;
   width: 40vw;
-}
-@media only screen and (max-width: 768px) {
-  #reviews > div > div {
-    width: 100%;
-  }
 }
 #sb {
   margin: 0 1em 2em 0;
