@@ -1,7 +1,6 @@
 const grunt = require('grunt');
 
 module.exports = function(grunt) {
-  // Project configuration.
   grunt.initConfig({
     aws: grunt.file.readJSON(process.env.HOME + '/.aws/grunt-aws.json'),
     s3: {
