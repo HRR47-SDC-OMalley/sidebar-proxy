@@ -19,6 +19,11 @@
   "homepage": "https://github.com/HRR47-FEC-Burke/reburke-proxy-one#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.5"
+    "http-proxy-middleware": "^1.0.5",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-aws": "^0.7.1"
   }
 }
