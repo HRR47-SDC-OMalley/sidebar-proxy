@@ -30,7 +30,7 @@ const reviewsScriptUrl = process.env.REVIEWS_SCRIPT
   || 'http://localhost:2625/dist/bundle.js';
 // Similar Listing and News
 const slnTarget = process.env.SLN_TARGET
-  || 'http://localhost:3005/';
+  || 'http://54.193.70.67';
 const slnScriptUrl = process.env.SLN_SCRIPT
   || 'http://localhost:3005/similar-listings-news.bundle.js';
 
@@ -38,12 +38,12 @@ const slnScriptUrl = process.env.SLN_SCRIPT
  * Serve template
  */
 app.get('/item/:id', (req, res) => {
-  res.send(pug.renderFile(path.resolve(__dirname, './../client/listing.pug'), {
+  res.end(pug.renderFile(path.resolve(__dirname, './../client/listing.pug'), {
     photoScriptUrl,
     sbScriptUrl,
     reviewsScriptUrl,
     slnScriptUrl
-  })).end();
+  }));
 });
 
 /**
@@ -63,24 +63,26 @@ if (CLOUD_STYLE_URL) {
  * Main Photo Proxy
  */
 const photoProxy = { target: photoTarget, changeOrigin: true };
-app.use('*/photo/api', createProxyMiddleware(photoProxy));
+app.use('*/photo/api/*', createProxyMiddleware(photoProxy));
 
 /**
  * Sidebar Proxy
  */
 const sbProxy = { target: sbTarget, changeOrigin: true };
-app.use('*/sb/api', createProxyMiddleware(sbProxy));
+app.use('*/sb/api/*', createProxyMiddleware(sbProxy));
 
 /**
  * Seller Reviews Proxy
  */
 const reviewsProxy = { target: reviewsTarget, changeOrigin: true };
-app.use('*/reviews/api', createProxyMiddleware(reviewsProxy));
+app.use('*/reviews/api/*', createProxyMiddleware(reviewsProxy));
 
 /**
  * Similar Listings & Related News Proxy
  */
 const slnProxy = { target: slnTarget, changeOrigin: true };
-app.use('*/sln/api', createProxyMiddleware(slnProxy));
+app.use('*/sln/api/*', createProxyMiddleware(slnProxy));
+
+// app.get('/sln/api/*', (req, res, next) => res.redirect(slnTarget + req.originalUrl.replace(/\?.*$/, '')));
 
 app.listen(PORT, () => console.log(`ReBurke listening on ${URL}:${PORT}`));

@@ -1,4 +1,7 @@
 .env
+.env.swp
+.env.docker
+.env.docker.swp
 coverage
 node_modules
 npm-debug.log
