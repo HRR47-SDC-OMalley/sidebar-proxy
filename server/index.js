@@ -83,6 +83,4 @@ app.use('*/reviews/api/*', createProxyMiddleware(reviewsProxy));
 const slnProxy = { target: slnTarget, changeOrigin: true };
 app.use('*/sln/api/*', createProxyMiddleware(slnProxy));
 
-// app.get('/sln/api/*', (req, res, next) => res.redirect(slnTarget + req.originalUrl.replace(/\?.*$/, '')));
-
 app.listen(PORT, () => console.log(`ReBurke listening on ${URL}:${PORT}`));
