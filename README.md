@@ -50,6 +50,7 @@ npm start
 
 > Please refer to the default variables in server/index.js for examples.
 
+```sh
 - PORT=<your-server-port>
 - URL=<your-origin-url>
 - PHOTO_TARGET=<main-photo-service-url>
@@ -60,6 +61,7 @@ npm start
 - REVIEWS_SCRIPT=<seller-reviews-script-url>
 - SLN_TARGET=<similar-listings-and-news-service-url>
 - SLN_SCRIPT=<similar-listings-and-news-script-url>
+```
 
 ### Hosting the Stylesheet on Cloud
 > Requires the dev dependencies to be installed
