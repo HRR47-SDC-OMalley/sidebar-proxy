@@ -23,7 +23,6 @@ section {
 }
 #main-photo > div {
   left: 0;
-  position: unset;
   margin-left: unset;
   margin-right: unset;
   max-width: unset;

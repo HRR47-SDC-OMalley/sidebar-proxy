@@ -30,7 +30,7 @@ const reviewsScriptUrl = process.env.REVIEWS_SCRIPT
   || 'http://localhost:2625/dist/bundle.js';
 // Similar Listing and News
 const slnTarget = process.env.SLN_TARGET
-  || 'http://54.193.70.67';
+  || 'http://localhost:3005';
 const slnScriptUrl = process.env.SLN_SCRIPT
   || 'http://localhost:3005/similar-listings-news.bundle.js';
 
