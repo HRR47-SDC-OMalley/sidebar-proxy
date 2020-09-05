@@ -5,7 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "stress": "artillery run ./spec/load_test_proxy.yml",
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/HRR47-FEC-Burke/reburke-proxy-one#readme",
   "dependencies": {
+    "artillery": "^1.6.1",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.5",
     "newrelic": "^6.13.0",

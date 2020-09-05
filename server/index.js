@@ -1,7 +1,9 @@
+require('newrelic');
 const path = require('path');
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const pug = require('pug');
+
 
 const app = express();
 app.set('view engine', 'pug');

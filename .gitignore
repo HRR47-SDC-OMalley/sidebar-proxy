@@ -3,3 +3,7 @@ node_modules
 .env.swp
 .env.docker
 .env.docker.swp
+
+
+#New Relic
+newrelic.js
