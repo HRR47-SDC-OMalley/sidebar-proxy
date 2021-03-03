@@ -20,7 +20,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.5",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
